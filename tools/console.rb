@@ -29,6 +29,8 @@ review1 = Review.new(john,spirited_away,10)
 review2 = Review.new(meghann,howls_moving_castle,9)
 review3 = Review.new(spencer,kikis_delivery_service,8)
 review4 = Review.new(shawn,princess_mononoke,7)
+review5 = Review.new(shawn,spirited_away,6)
+review6 = Review.new(meghann,spirited_away,7)
 
 
 
