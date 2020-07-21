@@ -11,5 +11,21 @@ class Viewer
   def self.all
     @@all
   end
+
+
+  def reviews
+    
+    #Review.all.map {|x| x == self}
+    Review.all.each do |k,v|
+      k == self
+
+      binding.pry
+    
+    end
+      
+  end
+
+  
+  
   
 end
