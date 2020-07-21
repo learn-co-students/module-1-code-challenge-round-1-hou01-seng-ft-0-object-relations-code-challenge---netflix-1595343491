@@ -33,9 +33,11 @@ class Viewer
 
   def rate_movie(movie, rating)
     if self.reviewed_movie?(movie)
-      rated_review=self.reviewed_movies.find{|value|
-      value.movie==movie}
-      rated_review.rating=rating
+      rated_movie=self.reviewed_movies.find{|value|
+      value.title==movie.title}
+      rated_review = Review.all.find{|ele|
+    ele.movie.title==rated_movie.title}
+    rated_review.rating=rating
     else
       Review.new(self, movie,rating)
     end
