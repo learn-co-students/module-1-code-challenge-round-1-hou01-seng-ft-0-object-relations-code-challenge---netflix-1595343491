@@ -12,4 +12,11 @@ class Movie
     @@all
   end
 
+  def reviews
+    Review.all.find_all {|reviews| reviews.movie == self}
+  end
+
+  # def reveiwers
+  #   ###
+  # end
 end
