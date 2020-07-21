@@ -1,4 +1,4 @@
-class Viewer
+class Viewer 
   attr_accessor :username
 
   @@all = []
@@ -12,4 +12,12 @@ class Viewer
     @@all
   end
   
+  def reviews 
+   Review.all.find_all {|reviews| reviews.viewer == self} 
+  end
+
+  # def reviewed_movies
+  #   ###
+  # end
+
 end
