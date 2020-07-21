@@ -18,16 +18,16 @@ class Viewer
   end
 
   def reviewed_movies
-    arr=Review.all.find_all{|value|
-    value.viewer==self}
-    arr.each{|ele|
-    ele.movie}
+    movies=[]
+    self.reviews.collect{|ele|
+    movies.push(ele.movie)}
+    movies
   end
 
   def reviewed_movie?(movie)
     titles=[]
-    self.reviewed_movies.each{|ele|
-    titles.push(ele.movie.title)}
+    self.reviewed_movies.select{|ele|
+    titles.push(ele.title)}
     titles.include? movie.title
   end
 
